@@ -5,16 +5,15 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b5a66021872e463cb36edd372d31f75b" Name="Diagram1" >
-        <EntityTypeShape EntityType="ModeloFarmacia.Persona" Width="1.5" PointX="7.25" PointY="0.75" />
-        <EntityTypeShape EntityType="ModeloFarmacia.PersonaFisica" Width="1.5" PointX="10.875" PointY="0.875" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Persona" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ModeloFarmacia.PersonaFisica" Width="1.5" PointX="11" PointY="0.875" />
         <InheritanceConnector EntityType="ModeloFarmacia.PersonaFisica" />
-        <EntityTypeShape EntityType="ModeloFarmacia.Empleado" Width="1.5" PointX="10.875" PointY="2.125" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Empleado" Width="1.5" PointX="12" PointY="2.5" />
         <InheritanceConnector EntityType="ModeloFarmacia.Empleado" />
-        <EntityTypeShape EntityType="ModeloFarmacia.Empresa" Width="1.5" PointX="7.25" PointY="2.375" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Empresa" Width="1.5" PointX="7.375" PointY="2.875" />
         <InheritanceConnector EntityType="ModeloFarmacia.Empresa" />
-        <EntityTypeShape EntityType="ModeloFarmacia.Cliente" Width="1.5" PointX="9" PointY="2.125" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Cliente" Width="1.5" PointX="10.125" PointY="2.5" />
         <InheritanceConnector EntityType="ModeloFarmacia.Cliente" />
-        <EntityTypeShape EntityType="ModeloFarmacia.puto" Width="1.5" PointX="9.125" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
