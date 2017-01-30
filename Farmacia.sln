@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Presentacion", "1-Presentacion", "{8F593FF2-4462-4072-BC22-33E052A41E6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-DAL", "3-DAL", "{51F7C3E3-B150-442F-8AA8-89FCD562F8D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Servicio", "2-Servicio", "{6972C529-A995-4BBE-A5CC-8EAD0663196C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C55CAEB6-86EF-4128-8721-66598D83E749}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C55CAEB6-86EF-4128-8721-66598D83E749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C55CAEB6-86EF-4128-8721-66598D83E749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C55CAEB6-86EF-4128-8721-66598D83E749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C55CAEB6-86EF-4128-8721-66598D83E749}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C55CAEB6-86EF-4128-8721-66598D83E749} = {51F7C3E3-B150-442F-8AA8-89FCD562F8D1}
+	EndGlobalSection
+EndGlobal
