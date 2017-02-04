@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b5a66021872e463cb36edd372d31f75b" Name="Diagram1" >
+      <Diagram DiagramId="b5a66021872e463cb36edd372d31f75b" Name="Diagram1" ZoomLevel="83" >
         <EntityTypeShape EntityType="ModeloFarmacia.Persona" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="ModeloFarmacia.PersonaFisica" Width="1.5" PointX="11" PointY="0.875" />
         <InheritanceConnector EntityType="ModeloFarmacia.PersonaFisica" />
@@ -14,6 +14,13 @@
         <InheritanceConnector EntityType="ModeloFarmacia.Empresa" />
         <EntityTypeShape EntityType="ModeloFarmacia.Cliente" Width="1.5" PointX="10.125" PointY="2.5" />
         <InheritanceConnector EntityType="ModeloFarmacia.Cliente" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Laboratorio" Width="1.5" PointX="14.875" PointY="0.625" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Patologia" Width="1.5" PointX="14.5" PointY="2.375" />
+        <EntityTypeShape EntityType="ModeloFarmacia.Medicamento" Width="1.5" PointX="14.25" PointY="4.625" />
+        <EntityTypeShape EntityType="ModeloFarmacia.ObraSocialMedicamento" Width="1.5" PointX="12.125" PointY="4.625" />
+        <InheritanceConnector EntityType="ModeloFarmacia.Medicamento" />
+        <EntityTypeShape EntityType="ModeloFarmacia.ObraSocial" Width="1.5" PointX="10" PointY="4.625" />
+        <InheritanceConnector EntityType="ModeloFarmacia.ObraSocial" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
