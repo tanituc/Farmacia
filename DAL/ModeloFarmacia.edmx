@@ -40,6 +40,7 @@
             <End Role="Patologia" EntitySet="Patologias" />
             <End Role="Medicamento" EntitySet="Medicamentos" />
           </AssociationSet>
+          <EntitySet Name="PersonaFisicaSet" EntityType="ModeloFarmacia.PersonaFisica" />
           </EntityContainer>
         <EntityType Name="Persona">
           <Key>
@@ -47,15 +48,20 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="PersonaFisica" BaseType="ModeloFarmacia.Persona" />
+        <EntityType Name="PersonaFisica" >
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" />
+        </EntityType>
         <EntityType Name="Empleado" BaseType="ModeloFarmacia.PersonaFisica">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpleadoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Empresa" BaseType="ModeloFarmacia.Persona">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpresaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Cliente" BaseType="ModeloFarmacia.PersonaFisica">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClienteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="Patologia">
           <Key>

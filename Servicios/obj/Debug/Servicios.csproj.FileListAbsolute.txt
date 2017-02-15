@@ -1,0 +1,5 @@
+D:\Apps\Farmacia\Servicios\bin\Debug\Servicios.dll
+D:\Apps\Farmacia\Servicios\bin\Debug\Servicios.pdb
+D:\Apps\Farmacia\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
+D:\Apps\Farmacia\Servicios\obj\Debug\Servicios.dll
+D:\Apps\Farmacia\Servicios\obj\Debug\Servicios.pdb

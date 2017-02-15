@@ -46,17 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Vistas\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Vistas\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Vistas\Medicamentos\ABM_Medicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\ABM_Medicamento.Designer.cs">
+      <DependentUpon>ABM_Medicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\GestionMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\GestionMedicamento.Designer.cs">
+      <DependentUpon>GestionMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +75,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Medicamentos\ABM_Medicamento.resx">
+      <DependentUpon>ABM_Medicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Medicamentos\GestionMedicamento.resx">
+      <DependentUpon>GestionMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +96,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vistas\Clientes\" />
+    <Folder Include="Vistas\Laboratorios\" />
+    <Folder Include="Vistas\Ventas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Servicios\Servicios.csproj">
+      <Project>{d6914abd-65e9-4e69-8e7e-b96a635535cb}</Project>
+      <Name>Servicios</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

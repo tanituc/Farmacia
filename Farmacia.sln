@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farmacia", "Farmacia\Farmacia.csproj", "{5002ED8A-BE43-4F66-A85E-B695E9ED9CF7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servicios", "Servicios\Servicios.csproj", "{D6914ABD-65E9-4E69-8E7E-B96A635535CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5002ED8A-BE43-4F66-A85E-B695E9ED9CF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5002ED8A-BE43-4F66-A85E-B695E9ED9CF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5002ED8A-BE43-4F66-A85E-B695E9ED9CF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6914ABD-65E9-4E69-8E7E-B96A635535CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6914ABD-65E9-4E69-8E7E-B96A635535CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6914ABD-65E9-4E69-8E7E-B96A635535CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6914ABD-65E9-4E69-8E7E-B96A635535CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E0F829D7-F22C-4AD1-B79B-D0A2145F1E3C} = {CCF2A0A8-A6C3-4608-87D7-7B48A031B4BE}
 		{5002ED8A-BE43-4F66-A85E-B695E9ED9CF7} = {EF6EDF6D-2056-438D-B8DB-9AE1C80E69A5}
+		{D6914ABD-65E9-4E69-8E7E-B96A635535CB} = {DBCA4C15-3740-4F8A-921B-61BDD4252970}
 	EndGlobalSection
 EndGlobal

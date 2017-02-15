@@ -7,7 +7,6 @@
       <Diagram DiagramId="b5a66021872e463cb36edd372d31f75b" Name="Diagram1" ZoomLevel="83" >
         <EntityTypeShape EntityType="ModeloFarmacia.Persona" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="ModeloFarmacia.PersonaFisica" Width="1.5" PointX="11" PointY="0.875" />
-        <InheritanceConnector EntityType="ModeloFarmacia.PersonaFisica" />
         <EntityTypeShape EntityType="ModeloFarmacia.Empleado" Width="1.5" PointX="12" PointY="2.5" />
         <InheritanceConnector EntityType="ModeloFarmacia.Empleado" />
         <EntityTypeShape EntityType="ModeloFarmacia.Empresa" Width="1.5" PointX="7.375" PointY="2.875" />

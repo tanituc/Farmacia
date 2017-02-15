@@ -1,0 +1,13 @@
+D:\Apps\Farmacia\Farmacia\bin\Debug\Farmacia.exe.config
+D:\Apps\Farmacia\Farmacia\bin\Debug\Farmacia.exe
+D:\Apps\Farmacia\Farmacia\bin\Debug\Farmacia.pdb
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.csprojResolveAssemblyReference.cache
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Properties.Resources.resources
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Principal.resources
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.csproj.GenerateResource.Cache
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.exe
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.pdb
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.ABM_Medicamento.resources
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.GestionMedicamento.resources
+D:\Apps\Farmacia\Farmacia\bin\Debug\Servicios.dll
+D:\Apps\Farmacia\Farmacia\bin\Debug\Servicios.pdb
