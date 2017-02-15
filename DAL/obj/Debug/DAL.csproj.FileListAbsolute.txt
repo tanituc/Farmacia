@@ -1,0 +1,10 @@
+D:\Apps\Farmacia\DAL\bin\Debug\DAL.dll.config
+D:\Apps\Farmacia\DAL\bin\Debug\DAL.dll
+D:\Apps\Farmacia\DAL\bin\Debug\DAL.pdb
+D:\Apps\Farmacia\DAL\bin\Debug\EntityFramework.dll
+D:\Apps\Farmacia\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Apps\Farmacia\DAL\bin\Debug\EntityFramework.xml
+D:\Apps\Farmacia\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Apps\Farmacia\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Apps\Farmacia\DAL\obj\Debug\DAL.dll
+D:\Apps\Farmacia\DAL\obj\Debug\DAL.pdb

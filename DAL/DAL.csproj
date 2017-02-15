@@ -62,7 +62,6 @@
     <None Include="App.config" />
     <EntityDeploy Include="ModeloFarmacia.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModeloFarmacia.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="ModeloFarmacia.edmx.diagram">
       <DependentUpon>ModeloFarmacia.edmx</DependentUpon>

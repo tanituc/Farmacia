@@ -14,9 +14,32 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModeloFarmacia" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="ModeloFarmaciaContainer" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Personas" EntityType="ModeloFarmacia.Persona" />
-          <EntitySet Name="Laboratorios" EntityType="ModeloFarmacia.Laboratorio" />
           <EntitySet Name="Patologias" EntityType="ModeloFarmacia.Patologia" />
-          <EntitySet Name="ObraSocialMedicamentoSet" EntityType="ModeloFarmacia.ObraSocialMedicamento" />
+          <EntitySet Name="Medicamentos" EntityType="ModeloFarmacia.Medicamento" />
+          <EntitySet Name="Marcas" EntityType="ModeloFarmacia.Marca" />
+          <EntitySet Name="ObraSociales" EntityType="ModeloFarmacia.ObraSocial" />
+          <EntitySet Name="Laboratorios" EntityType="ModeloFarmacia.Laboratorio" />
+          <AssociationSet Name="MarcaLaboratorio" Association="ModeloFarmacia.MarcaLaboratorio">
+            <End Role="Marca" EntitySet="Marcas" />
+            <End Role="Laboratorio" EntitySet="Laboratorios" />
+          </AssociationSet>
+          <AssociationSet Name="MedicamentoMarca" Association="ModeloFarmacia.MedicamentoMarca">
+            <End Role="Medicamento" EntitySet="Medicamentos" />
+            <End Role="Marca" EntitySet="Marcas" />
+          </AssociationSet>
+          <EntitySet Name="MarcaObraSociales" EntityType="ModeloFarmacia.MarcaObraSocial" />
+          <AssociationSet Name="MarcaObraSocialObraSocial" Association="ModeloFarmacia.MarcaObraSocialObraSocial">
+            <End Role="MarcaObraSocial" EntitySet="MarcaObraSociales" />
+            <End Role="ObraSocial" EntitySet="ObraSociales" />
+          </AssociationSet>
+          <AssociationSet Name="MarcaObraSocialMarca" Association="ModeloFarmacia.MarcaObraSocialMarca">
+            <End Role="MarcaObraSocial" EntitySet="MarcaObraSociales" />
+            <End Role="Marca" EntitySet="Marcas" />
+          </AssociationSet>
+          <AssociationSet Name="PatologiaMedicamento" Association="ModeloFarmacia.PatologiaMedicamento">
+            <End Role="Patologia" EntitySet="Patologias" />
+            <End Role="Medicamento" EntitySet="Medicamentos" />
+          </AssociationSet>
           </EntityContainer>
         <EntityType Name="Persona">
           <Key>
@@ -34,29 +57,83 @@
         <EntityType Name="Cliente" BaseType="ModeloFarmacia.PersonaFisica">
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="Laboratorio">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
         <EntityType Name="Patologia">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="Medicamento" Relationship="ModeloFarmacia.PatologiaMedicamento" FromRole="Patologia" ToRole="Medicamento" />
         </EntityType>
-        <EntityType Name="Medicamento" BaseType="ModeloFarmacia.ObraSocialMedicamento">
+        <EntityType Name="Medicamento">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <Property Name="Indicaciones" Type="String" Nullable="false" />
+          <NavigationProperty Name="Marca" Relationship="ModeloFarmacia.MedicamentoMarca" FromRole="Medicamento" ToRole="Marca" />
+          <NavigationProperty Name="Patologia" Relationship="ModeloFarmacia.PatologiaMedicamento" FromRole="Medicamento" ToRole="Patologia" />
         </EntityType>
-        <EntityType Name="ObraSocialMedicamento">
+        <EntityType Name="Marca">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <Property Name="LaboratorioId" Type="String" Nullable="false" />
+          <Property Name="Precio" Type="String" Nullable="false" />
+          <Property Name="MedicamentoId" Type="String" Nullable="false" />
+          <NavigationProperty Name="Laboratorio" Relationship="ModeloFarmacia.MarcaLaboratorio" FromRole="Marca" ToRole="Laboratorio" />
+          <NavigationProperty Name="Medicamento" Relationship="ModeloFarmacia.MedicamentoMarca" FromRole="Marca" ToRole="Medicamento" />
+          <NavigationProperty Name="MarcaObraSocial" Relationship="ModeloFarmacia.MarcaObraSocialMarca" FromRole="Marca" ToRole="MarcaObraSocial" />
+        </EntityType>
+        <EntityType Name="ObraSocial">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" />
+          <NavigationProperty Name="MarcaObraSocial" Relationship="ModeloFarmacia.MarcaObraSocialObraSocial" FromRole="ObraSocial" ToRole="MarcaObraSocial" />
+        </EntityType>
+        <EntityType Name="Laboratorio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Marca" Relationship="ModeloFarmacia.MarcaLaboratorio" FromRole="Laboratorio" ToRole="Marca" />
+        </EntityType>
+        <Association Name="MarcaLaboratorio">
+          <End Type="ModeloFarmacia.Marca" Role="Marca" Multiplicity="*" />
+          <End Type="ModeloFarmacia.Laboratorio" Role="Laboratorio" Multiplicity="1" />
+        </Association>
+        <Association Name="MedicamentoMarca">
+          <End Type="ModeloFarmacia.Medicamento" Role="Medicamento" Multiplicity="1" />
+          <End Type="ModeloFarmacia.Marca" Role="Marca" Multiplicity="*" />
+        </Association>
+        <EntityType Name="MarcaObraSocial">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Detalle" Type="String" Nullable="false" />
+          <Property Name="IdMarca" Type="String" Nullable="false" />
           <Property Name="IdObraSocial" Type="String" Nullable="false" />
-          <Property Name="IdMedicamento" Type="String" Nullable="false" />
+          <NavigationProperty Name="ObraSocial" Relationship="ModeloFarmacia.MarcaObraSocialObraSocial" FromRole="MarcaObraSocial" ToRole="ObraSocial" />
+          <NavigationProperty Name="Marca" Relationship="ModeloFarmacia.MarcaObraSocialMarca" FromRole="MarcaObraSocial" ToRole="Marca" />
         </EntityType>
-        <EntityType Name="ObraSocial" BaseType="ModeloFarmacia.ObraSocialMedicamento">
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
+        <Association Name="MarcaObraSocialObraSocial">
+          <End Type="ModeloFarmacia.MarcaObraSocial" Role="MarcaObraSocial" Multiplicity="*" />
+          <End Type="ModeloFarmacia.ObraSocial" Role="ObraSocial" Multiplicity="1" />
+        </Association>
+        <Association Name="MarcaObraSocialMarca">
+          <End Type="ModeloFarmacia.MarcaObraSocial" Role="MarcaObraSocial" Multiplicity="*" />
+          <End Type="ModeloFarmacia.Marca" Role="Marca" Multiplicity="1" />
+        </Association>
+        <Association Name="PatologiaMedicamento">
+          <End Type="ModeloFarmacia.Patologia" Role="Patologia" Multiplicity="*" />
+          <End Type="ModeloFarmacia.Medicamento" Role="Medicamento" Multiplicity="1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
