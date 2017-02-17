@@ -51,6 +51,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cliente.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empresa.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratorio.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Marca.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MarcaObraSocial.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medicamento.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloFarmacia.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFarmacia.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloFarmacia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModeloFarmacia.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -60,6 +91,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloFarmacia.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ObraSocial.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patologia.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaFisica.cs">
+      <DependentUpon>ModeloFarmacia.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -73,6 +116,22 @@
       <DependentUpon>ModeloFarmacia.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModeloFarmacia.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloFarmacia.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloFarmacia.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModeloFarmacia.edmx.sql" />
+    <Content Include="ModeloFarmacia.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloFarmacia.cs</LastGenOutput>
+      <DependentUpon>ModeloFarmacia.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
