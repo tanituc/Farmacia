@@ -77,7 +77,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Descripcion" Type="String" Nullable="false" />
-          <Property Name="Indicaciones" Type="String" Nullable="false" />
+          <Property Name="Indicacion" Type="String" Nullable="false" />
           <NavigationProperty Name="Marca" Relationship="ModeloFarmacia.MedicamentoMarca" FromRole="Medicamento" ToRole="Marca" />
           <NavigationProperty Name="Patologia" Relationship="ModeloFarmacia.PatologiaMedicamento" FromRole="Medicamento" ToRole="Patologia" />
         </EntityType>

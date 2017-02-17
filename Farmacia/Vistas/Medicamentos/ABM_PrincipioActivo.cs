@@ -10,25 +10,24 @@ using System.Windows.Forms;
 
 namespace Farmacia.Vistas.Medicamentos
 {
-    public partial class ABM_Medicamento : Form
+    public partial class ABM_PrincipioActivo : Form
     {
-        public ABM_Medicamento()
+        public ABM_PrincipioActivo()
         {
             InitializeComponent();
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            NuevoMedicamento abmM = new NuevoMedicamento();
-            abmM.ShowDialog();
+
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
         }
 
-        private void GestionMedicamento_Load(object sender, EventArgs e)
+        private void ABM_PrincipioActivo_Load(object sender, EventArgs e)
         {
 
         }

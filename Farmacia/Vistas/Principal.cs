@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Farmacia.Vistas.Laboratorios;
 using Farmacia.Vistas.Medicamentos;
 
 namespace Farmacia.Vistas
@@ -25,8 +26,20 @@ namespace Farmacia.Vistas
 
         private void getionMedicamentosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionMedicamento gm = new GestionMedicamento();
-            gm.Show();
+            ABM_Medicamento gMedicamento = new ABM_Medicamento();
+            gMedicamento.Show();
+        }
+
+        private void nuevoPrincipioActivoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ABM_PrincipioActivo abmP = new ABM_PrincipioActivo();
+            abmP.ShowDialog();
+        }
+
+        private void gestionLaboratoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           ABM_Laboratorio gestionLaboratorio = new ABM_Laboratorio();
+            gestionLaboratorio.Show();
         }
     }
 }

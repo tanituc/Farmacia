@@ -29,16 +29,17 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.medicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.laboratoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.getionMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionLaboratoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaVentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoPrincipioActivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.medicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getionMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionPrincipioActivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.laboratoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionLaboratoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,57 +48,14 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ventasToolStripMenuItem,
             this.medicamentosToolStripMenuItem,
+            this.laboratoriosToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.laboratoriosToolStripMenuItem});
+            this.empleadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(755, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // medicamentosToolStripMenuItem
-            // 
-            this.medicamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.getionMedicamentosToolStripMenuItem,
-            this.nuevoPrincipioActivoToolStripMenuItem});
-            this.medicamentosToolStripMenuItem.Name = "medicamentosToolStripMenuItem";
-            this.medicamentosToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-            this.medicamentosToolStripMenuItem.Text = "Medicamentos";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionClientesToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // laboratoriosToolStripMenuItem
-            // 
-            this.laboratoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionLaboratoriosToolStripMenuItem});
-            this.laboratoriosToolStripMenuItem.Name = "laboratoriosToolStripMenuItem";
-            this.laboratoriosToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
-            this.laboratoriosToolStripMenuItem.Text = "Laboratorios";
-            // 
-            // getionMedicamentosToolStripMenuItem
-            // 
-            this.getionMedicamentosToolStripMenuItem.Name = "getionMedicamentosToolStripMenuItem";
-            this.getionMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.getionMedicamentosToolStripMenuItem.Text = "Getion Medicamentos";
-            this.getionMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.getionMedicamentosToolStripMenuItem_Click);
-            // 
-            // gestionClientesToolStripMenuItem
-            // 
-            this.gestionClientesToolStripMenuItem.Name = "gestionClientesToolStripMenuItem";
-            this.gestionClientesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.gestionClientesToolStripMenuItem.Text = "Gestion Clientes";
-            // 
-            // gestionLaboratoriosToolStripMenuItem
-            // 
-            this.gestionLaboratoriosToolStripMenuItem.Name = "gestionLaboratoriosToolStripMenuItem";
-            this.gestionLaboratoriosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.gestionLaboratoriosToolStripMenuItem.Text = "Gestion Laboratorios";
             // 
             // ventasToolStripMenuItem
             // 
@@ -120,11 +78,63 @@
             this.consultaVentaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.consultaVentaToolStripMenuItem.Text = "Consulta Venta";
             // 
-            // nuevoPrincipioActivoToolStripMenuItem
+            // medicamentosToolStripMenuItem
             // 
-            this.nuevoPrincipioActivoToolStripMenuItem.Name = "nuevoPrincipioActivoToolStripMenuItem";
-            this.nuevoPrincipioActivoToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.nuevoPrincipioActivoToolStripMenuItem.Text = "Nuevo Principio Activo";
+            this.medicamentosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.getionMedicamentosToolStripMenuItem,
+            this.gestionPrincipioActivoToolStripMenuItem});
+            this.medicamentosToolStripMenuItem.Name = "medicamentosToolStripMenuItem";
+            this.medicamentosToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.medicamentosToolStripMenuItem.Text = "Medicamentos";
+            // 
+            // getionMedicamentosToolStripMenuItem
+            // 
+            this.getionMedicamentosToolStripMenuItem.Name = "getionMedicamentosToolStripMenuItem";
+            this.getionMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.getionMedicamentosToolStripMenuItem.Text = "Getion Medicamentos";
+            this.getionMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.getionMedicamentosToolStripMenuItem_Click);
+            // 
+            // gestionPrincipioActivoToolStripMenuItem
+            // 
+            this.gestionPrincipioActivoToolStripMenuItem.Name = "gestionPrincipioActivoToolStripMenuItem";
+            this.gestionPrincipioActivoToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.gestionPrincipioActivoToolStripMenuItem.Text = "Gestion Principio Activo";
+            this.gestionPrincipioActivoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPrincipioActivoToolStripMenuItem_Click);
+            // 
+            // laboratoriosToolStripMenuItem
+            // 
+            this.laboratoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionLaboratoriosToolStripMenuItem});
+            this.laboratoriosToolStripMenuItem.Name = "laboratoriosToolStripMenuItem";
+            this.laboratoriosToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.laboratoriosToolStripMenuItem.Text = "Laboratorios";
+            // 
+            // gestionLaboratoriosToolStripMenuItem
+            // 
+            this.gestionLaboratoriosToolStripMenuItem.Name = "gestionLaboratoriosToolStripMenuItem";
+            this.gestionLaboratoriosToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.gestionLaboratoriosToolStripMenuItem.Text = "Gestion Laboratorios";
+            this.gestionLaboratoriosToolStripMenuItem.Click += new System.EventHandler(this.gestionLaboratoriosToolStripMenuItem_Click);
+            // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gestionClientesToolStripMenuItem});
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // gestionClientesToolStripMenuItem
+            // 
+            this.gestionClientesToolStripMenuItem.Name = "gestionClientesToolStripMenuItem";
+            this.gestionClientesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.gestionClientesToolStripMenuItem.Text = "Gestion Clientes";
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
             // 
             // Principal
             // 
@@ -155,6 +165,7 @@
         private System.Windows.Forms.ToolStripMenuItem ventasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevaVentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaVentaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoPrincipioActivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionPrincipioActivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
     }
 }

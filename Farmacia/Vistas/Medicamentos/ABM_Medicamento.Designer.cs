@@ -28,133 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnHabilitar = new System.Windows.Forms.Button();
+            this.btnDeshabilitar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.dgvMedicamentosActivos = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cbPrincipioActivo = new System.Windows.Forms.ComboBox();
-            this.tbNombreComercial = new System.Windows.Forms.TextBox();
-            this.lblPrincipioActivo = new System.Windows.Forms.Label();
-            this.lblNombreComercial = new System.Windows.Forms.Label();
-            this.lblLaboratorio = new System.Windows.Forms.Label();
-            this.lblPrecioLista = new System.Windows.Forms.Label();
-            this.cbLaboratorio = new System.Windows.Forms.ComboBox();
-            this.tbPrecioLista = new System.Windows.Forms.TextBox();
+            this.dgvMedicamentosInactivos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblMedicamentosInactivos = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentosActivos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentosInactivos)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnGuardar
+            // btnNuevo
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(12, 12);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnNuevo.Location = new System.Drawing.Point(12, 12);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevo.TabIndex = 0;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnLimpiar
+            // btnHabilitar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(93, 12);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 1;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnHabilitar.Location = new System.Drawing.Point(697, 321);
+            this.btnHabilitar.Name = "btnHabilitar";
+            this.btnHabilitar.Size = new System.Drawing.Size(75, 23);
+            this.btnHabilitar.TabIndex = 1;
+            this.btnHabilitar.Text = "Habilitar";
+            this.btnHabilitar.UseVisualStyleBackColor = true;
+            // 
+            // btnDeshabilitar
+            // 
+            this.btnDeshabilitar.Location = new System.Drawing.Point(697, 86);
+            this.btnDeshabilitar.Name = "btnDeshabilitar";
+            this.btnDeshabilitar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeshabilitar.TabIndex = 2;
+            this.btnDeshabilitar.Text = "Deshabilitar";
+            this.btnDeshabilitar.UseVisualStyleBackColor = true;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(93, 12);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            // 
+            // dgvMedicamentosActivos
+            // 
+            this.dgvMedicamentosActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMedicamentosActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentosActivos.Location = new System.Drawing.Point(12, 115);
+            this.dgvMedicamentosActivos.Name = "dgvMedicamentosActivos";
+            this.dgvMedicamentosActivos.Size = new System.Drawing.Size(760, 200);
+            this.dgvMedicamentosActivos.TabIndex = 4;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(415, 12);
+            this.btnSalir.Location = new System.Drawing.Point(697, 12);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 2;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cbPrincipioActivo
+            // dgvMedicamentosInactivos
             // 
-            this.cbPrincipioActivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPrincipioActivo.FormattingEnabled = true;
-            this.cbPrincipioActivo.Location = new System.Drawing.Point(132, 83);
-            this.cbPrincipioActivo.Name = "cbPrincipioActivo";
-            this.cbPrincipioActivo.Size = new System.Drawing.Size(121, 21);
-            this.cbPrincipioActivo.TabIndex = 3;
+            this.dgvMedicamentosInactivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentosInactivos.Location = new System.Drawing.Point(12, 350);
+            this.dgvMedicamentosInactivos.Name = "dgvMedicamentosInactivos";
+            this.dgvMedicamentosInactivos.Size = new System.Drawing.Size(760, 200);
+            this.dgvMedicamentosInactivos.TabIndex = 6;
             // 
-            // tbNombreComercial
+            // label1
             // 
-            this.tbNombreComercial.Location = new System.Drawing.Point(132, 110);
-            this.tbNombreComercial.Name = "tbNombreComercial";
-            this.tbNombreComercial.Size = new System.Drawing.Size(121, 20);
-            this.tbNombreComercial.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(114, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Medicamentos Activos";
             // 
-            // lblPrincipioActivo
+            // lblMedicamentosInactivos
             // 
-            this.lblPrincipioActivo.AutoSize = true;
-            this.lblPrincipioActivo.Location = new System.Drawing.Point(46, 86);
-            this.lblPrincipioActivo.Name = "lblPrincipioActivo";
-            this.lblPrincipioActivo.Size = new System.Drawing.Size(80, 13);
-            this.lblPrincipioActivo.TabIndex = 5;
-            this.lblPrincipioActivo.Text = "Principio Activo";
-            // 
-            // lblNombreComercial
-            // 
-            this.lblNombreComercial.AutoSize = true;
-            this.lblNombreComercial.Location = new System.Drawing.Point(33, 113);
-            this.lblNombreComercial.Name = "lblNombreComercial";
-            this.lblNombreComercial.Size = new System.Drawing.Size(93, 13);
-            this.lblNombreComercial.TabIndex = 6;
-            this.lblNombreComercial.Text = "Nombre Comercial";
-            // 
-            // lblLaboratorio
-            // 
-            this.lblLaboratorio.AutoSize = true;
-            this.lblLaboratorio.Location = new System.Drawing.Point(66, 139);
-            this.lblLaboratorio.Name = "lblLaboratorio";
-            this.lblLaboratorio.Size = new System.Drawing.Size(60, 13);
-            this.lblLaboratorio.TabIndex = 7;
-            this.lblLaboratorio.Text = "Laboratorio";
-            // 
-            // lblPrecioLista
-            // 
-            this.lblPrecioLista.AutoSize = true;
-            this.lblPrecioLista.Location = new System.Drawing.Point(64, 166);
-            this.lblPrecioLista.Name = "lblPrecioLista";
-            this.lblPrecioLista.Size = new System.Drawing.Size(62, 13);
-            this.lblPrecioLista.TabIndex = 8;
-            this.lblPrecioLista.Text = "Precio Lista";
-            // 
-            // cbLaboratorio
-            // 
-            this.cbLaboratorio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLaboratorio.FormattingEnabled = true;
-            this.cbLaboratorio.Location = new System.Drawing.Point(132, 136);
-            this.cbLaboratorio.Name = "cbLaboratorio";
-            this.cbLaboratorio.Size = new System.Drawing.Size(121, 21);
-            this.cbLaboratorio.TabIndex = 9;
-            // 
-            // tbPrecioLista
-            // 
-            this.tbPrecioLista.Location = new System.Drawing.Point(132, 163);
-            this.tbPrecioLista.Name = "tbPrecioLista";
-            this.tbPrecioLista.Size = new System.Drawing.Size(121, 20);
-            this.tbPrecioLista.TabIndex = 10;
+            this.lblMedicamentosInactivos.AutoSize = true;
+            this.lblMedicamentosInactivos.Location = new System.Drawing.Point(12, 326);
+            this.lblMedicamentosInactivos.Name = "lblMedicamentosInactivos";
+            this.lblMedicamentosInactivos.Size = new System.Drawing.Size(122, 13);
+            this.lblMedicamentosInactivos.TabIndex = 8;
+            this.lblMedicamentosInactivos.Text = "Medicamentos Inactivos";
             // 
             // ABM_Medicamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 352);
-            this.Controls.Add(this.tbPrecioLista);
-            this.Controls.Add(this.cbLaboratorio);
-            this.Controls.Add(this.lblPrecioLista);
-            this.Controls.Add(this.lblLaboratorio);
-            this.Controls.Add(this.lblNombreComercial);
-            this.Controls.Add(this.lblPrincipioActivo);
-            this.Controls.Add(this.tbNombreComercial);
-            this.Controls.Add(this.cbPrincipioActivo);
+            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.Controls.Add(this.lblMedicamentosInactivos);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvMedicamentosInactivos);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dgvMedicamentosActivos);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnDeshabilitar);
+            this.Controls.Add(this.btnHabilitar);
+            this.Controls.Add(this.btnNuevo);
             this.Name = "ABM_Medicamento";
-            this.Text = "Nuevo Medicamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Gestion Medicamentos";
+            this.Load += new System.EventHandler(this.GestionMedicamento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentosActivos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentosInactivos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,16 +150,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnHabilitar;
+        private System.Windows.Forms.Button btnDeshabilitar;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.DataGridView dgvMedicamentosActivos;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox cbPrincipioActivo;
-        private System.Windows.Forms.TextBox tbNombreComercial;
-        private System.Windows.Forms.Label lblPrincipioActivo;
-        private System.Windows.Forms.Label lblNombreComercial;
-        private System.Windows.Forms.Label lblLaboratorio;
-        private System.Windows.Forms.Label lblPrecioLista;
-        private System.Windows.Forms.ComboBox cbLaboratorio;
-        private System.Windows.Forms.TextBox tbPrecioLista;
+        private System.Windows.Forms.DataGridView dgvMedicamentosInactivos;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMedicamentosInactivos;
     }
 }

@@ -8,6 +8,8 @@ D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.csproj.GenerateResource.Cache
 D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.exe
 D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.pdb
 D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.ABM_Medicamento.resources
-D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.GestionMedicamento.resources
 D:\Apps\Farmacia\Farmacia\bin\Debug\Servicios.dll
 D:\Apps\Farmacia\Farmacia\bin\Debug\Servicios.pdb
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.ABM_PrincipioActivo.resources
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.NuevoMedicamento.resources
+D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Laboratorios.ABM_Laboratorio.resources

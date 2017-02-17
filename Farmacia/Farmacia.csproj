@@ -48,17 +48,29 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Laboratorios\ABM_Laboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Laboratorios\ABM_Laboratorio.Designer.cs">
+      <DependentUpon>ABM_Laboratorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\NuevoMedicamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\NuevoMedicamento.Designer.cs">
+      <DependentUpon>NuevoMedicamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\ABM_PrincipioActivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Medicamentos\ABM_PrincipioActivo.Designer.cs">
+      <DependentUpon>ABM_PrincipioActivo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Medicamentos\ABM_Medicamento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Medicamentos\ABM_Medicamento.Designer.cs">
       <DependentUpon>ABM_Medicamento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Medicamentos\GestionMedicamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\Medicamentos\GestionMedicamento.Designer.cs">
-      <DependentUpon>GestionMedicamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Principal.cs">
       <SubType>Form</SubType>
@@ -75,11 +87,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vistas\Laboratorios\ABM_Laboratorio.resx">
+      <DependentUpon>ABM_Laboratorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Medicamentos\NuevoMedicamento.resx">
+      <DependentUpon>NuevoMedicamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Medicamentos\ABM_PrincipioActivo.resx">
+      <DependentUpon>ABM_PrincipioActivo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Medicamentos\ABM_Medicamento.resx">
       <DependentUpon>ABM_Medicamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Medicamentos\GestionMedicamento.resx">
-      <DependentUpon>GestionMedicamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -99,7 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Vistas\Clientes\" />
-    <Folder Include="Vistas\Laboratorios\" />
     <Folder Include="Vistas\Ventas\" />
   </ItemGroup>
   <ItemGroup>

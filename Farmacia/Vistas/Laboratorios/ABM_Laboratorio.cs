@@ -8,19 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Farmacia.Vistas.Medicamentos
+namespace Farmacia.Vistas.Laboratorios
 {
-    public partial class GestionMedicamento : Form
+    public partial class ABM_Laboratorio : Form
     {
-        public GestionMedicamento()
+        public ABM_Laboratorio()
         {
             InitializeComponent();
         }
 
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            ABM_Medicamento abmM = new ABM_Medicamento();
-            abmM.ShowDialog();
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
