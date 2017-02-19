@@ -13,3 +13,7 @@ D:\Apps\Farmacia\Farmacia\bin\Debug\Servicios.pdb
 D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.ABM_PrincipioActivo.resources
 D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Medicamentos.NuevoMedicamento.resources
 D:\Apps\Farmacia\Farmacia\obj\Debug\Farmacia.Vistas.Laboratorios.ABM_Laboratorio.resources
+D:\Apps\Farmacia\Farmacia\bin\Debug\DAL.dll
+D:\Apps\Farmacia\Farmacia\bin\Debug\EntityFramework.dll
+D:\Apps\Farmacia\Farmacia\bin\Debug\DAL.pdb
+D:\Apps\Farmacia\Farmacia\bin\Debug\EntityFramework.xml

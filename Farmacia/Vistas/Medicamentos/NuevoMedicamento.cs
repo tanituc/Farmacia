@@ -22,8 +22,8 @@ namespace Farmacia.Vistas.Medicamentos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            presentador.guardarMedicamento((int)cbPrincipioActivo.SelectedValue, tbNombreComercial.Text
-                ,(int)cbLaboratorio.SelectedValue,double.Parse(nudPrecioLista.Text));
+           // presentador.guardarMedicamento((int)cbPrincipioActivo.SelectedValue, tbNombreComercial.Text
+         //       ,(int)cbLaboratorio.SelectedValue,double.Parse(nudPrecioLista.Text));
         }
 
         private void btnAgregarPrincipioActivo_Click(object sender, EventArgs e)
@@ -35,6 +35,16 @@ namespace Farmacia.Vistas.Medicamentos
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cbPrincipioActivo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NuevoMedicamento_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,235 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="ModeloFarmacia.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-  <EntityContainer Name="ModeloFarmaciaTargetContainer" />
+<Schema Namespace="ModeloFarmacia.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModeloFarmaciaStoreContainer">
+    <EntitySet Name="Personas" EntityType="ModeloFarmacia.Store.Personas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patologias" EntityType="ModeloFarmacia.Store.Patologias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Medicamentos" EntityType="ModeloFarmacia.Store.Medicamentos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Marcas" EntityType="ModeloFarmacia.Store.Marcas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObraSociales" EntityType="ModeloFarmacia.Store.ObraSociales" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Laboratorios" EntityType="ModeloFarmacia.Store.Laboratorios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MarcaObraSociales" EntityType="ModeloFarmacia.Store.MarcaObraSociales" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaFisicaSet" EntityType="ModeloFarmacia.Store.PersonaFisicaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaFisicaSet_Empleado" EntityType="ModeloFarmacia.Store.PersonaFisicaSet_Empleado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personas_Empresa" EntityType="ModeloFarmacia.Store.Personas_Empresa" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PersonaFisicaSet_Cliente" EntityType="ModeloFarmacia.Store.PersonaFisicaSet_Cliente" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="MarcaLaboratorio" Association="ModeloFarmacia.Store.MarcaLaboratorio">
+      <End Role="Marca" EntitySet="Marcas" />
+      <End Role="Laboratorio" EntitySet="Laboratorios" />
+    </AssociationSet>
+    <AssociationSet Name="MedicamentoMarca" Association="ModeloFarmacia.Store.MedicamentoMarca">
+      <End Role="Medicamento" EntitySet="Medicamentos" />
+      <End Role="Marca" EntitySet="Marcas" />
+    </AssociationSet>
+    <AssociationSet Name="MarcaObraSocialObraSocial" Association="ModeloFarmacia.Store.MarcaObraSocialObraSocial">
+      <End Role="MarcaObraSocial" EntitySet="MarcaObraSociales" />
+      <End Role="ObraSocial" EntitySet="ObraSociales" />
+    </AssociationSet>
+    <AssociationSet Name="MarcaObraSocialMarca" Association="ModeloFarmacia.Store.MarcaObraSocialMarca">
+      <End Role="MarcaObraSocial" EntitySet="MarcaObraSociales" />
+      <End Role="Marca" EntitySet="Marcas" />
+    </AssociationSet>
+    <AssociationSet Name="PatologiaMedicamento" Association="ModeloFarmacia.Store.PatologiaMedicamento">
+      <End Role="Patologia" EntitySet="Patologias" />
+      <End Role="Medicamento" EntitySet="Medicamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empleado_inherits_PersonaFisica" Association="ModeloFarmacia.Store.FK_Empleado_inherits_PersonaFisica">
+      <End Role="PersonaFisica" EntitySet="PersonaFisicaSet" />
+      <End Role="Empleado" EntitySet="PersonaFisicaSet_Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Empresa_inherits_Persona" Association="ModeloFarmacia.Store.FK_Empresa_inherits_Persona">
+      <End Role="Persona" EntitySet="Personas" />
+      <End Role="Empresa" EntitySet="Personas_Empresa" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cliente_inherits_PersonaFisica" Association="ModeloFarmacia.Store.FK_Cliente_inherits_PersonaFisica">
+      <End Role="PersonaFisica" EntitySet="PersonaFisicaSet" />
+      <End Role="Cliente" EntitySet="PersonaFisicaSet_Cliente" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Personas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patologias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Medicamento_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medicamentos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Indicacion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Marcas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LaboratorioId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Precio" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MedicamentoId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Laboratorio_Id" Type="int" Nullable="false" />
+    <Property Name="Medicamento_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObraSociales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Laboratorios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MarcaObraSociales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Detalle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdMarca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IdObraSocial" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ObraSocial_Id" Type="int" Nullable="false" />
+    <Property Name="Marca_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonaFisicaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonaFisicaSet_Empleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="EmpleadoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personas_Empresa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="EmpresaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PersonaFisicaSet_Cliente">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ClienteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="MarcaLaboratorio">
+    <End Role="Marca" Type="ModeloFarmacia.Store.Marcas" Multiplicity="*" />
+    <End Role="Laboratorio" Type="ModeloFarmacia.Store.Laboratorios" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Laboratorio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="Laboratorio_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MedicamentoMarca">
+    <End Role="Medicamento" Type="ModeloFarmacia.Store.Medicamentos" Multiplicity="1" />
+    <End Role="Marca" Type="ModeloFarmacia.Store.Marcas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicamento">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Marca">
+        <PropertyRef Name="Medicamento_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MarcaObraSocialObraSocial">
+    <End Role="MarcaObraSocial" Type="ModeloFarmacia.Store.MarcaObraSociales" Multiplicity="*" />
+    <End Role="ObraSocial" Type="ModeloFarmacia.Store.ObraSociales" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ObraSocial">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MarcaObraSocial">
+        <PropertyRef Name="ObraSocial_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MarcaObraSocialMarca">
+    <End Role="MarcaObraSocial" Type="ModeloFarmacia.Store.MarcaObraSociales" Multiplicity="*" />
+    <End Role="Marca" Type="ModeloFarmacia.Store.Marcas" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Marca">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MarcaObraSocial">
+        <PropertyRef Name="Marca_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PatologiaMedicamento">
+    <End Role="Patologia" Type="ModeloFarmacia.Store.Patologias" Multiplicity="*" />
+    <End Role="Medicamento" Type="ModeloFarmacia.Store.Medicamentos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Medicamento">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Patologia">
+        <PropertyRef Name="Medicamento_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empleado_inherits_PersonaFisica">
+    <End Role="PersonaFisica" Type="ModeloFarmacia.Store.PersonaFisicaSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Empleado" Type="ModeloFarmacia.Store.PersonaFisicaSet_Empleado" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonaFisica">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Empresa_inherits_Persona">
+    <End Role="Persona" Type="ModeloFarmacia.Store.Personas" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Empresa" Type="ModeloFarmacia.Store.Personas_Empresa" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persona">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Empresa">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cliente_inherits_PersonaFisica">
+    <End Role="PersonaFisica" Type="ModeloFarmacia.Store.PersonaFisicaSet" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Cliente" Type="ModeloFarmacia.Store.PersonaFisicaSet_Cliente" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PersonaFisica">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

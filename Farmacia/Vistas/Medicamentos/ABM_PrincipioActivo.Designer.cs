@@ -35,12 +35,9 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
             this.lblIndicaciones = new System.Windows.Forms.Label();
             this.txtIndicaciones = new System.Windows.Forms.TextBox();
-            this.nudCodigo = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipioActivo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCodigo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir
@@ -88,6 +85,7 @@
             this.btnAgregar.TabIndex = 8;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtNombre
             // 
@@ -105,15 +103,6 @@
             this.lblNombre.TabIndex = 10;
             this.lblNombre.Text = "Nombre *";
             // 
-            // lblCodigo
-            // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(16, 105);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(47, 13);
-            this.lblCodigo.TabIndex = 12;
-            this.lblCodigo.Text = "Código *";
-            // 
             // lblIndicaciones
             // 
             this.lblIndicaciones.AutoSize = true;
@@ -130,39 +119,13 @@
             this.txtIndicaciones.Size = new System.Drawing.Size(180, 20);
             this.txtIndicaciones.TabIndex = 13;
             // 
-            // nudCodigo
-            // 
-            this.nudCodigo.Location = new System.Drawing.Point(69, 103);
-            this.nudCodigo.Maximum = new decimal(new int[] {
-            1000000,
-            0,
-            0,
-            0});
-            this.nudCodigo.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudCodigo.Name = "nudCodigo";
-            this.nudCodigo.ReadOnly = true;
-            this.nudCodigo.Size = new System.Drawing.Size(180, 20);
-            this.nudCodigo.TabIndex = 15;
-            this.nudCodigo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudCodigo.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // ABM_PrincipioActivo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 362);
-            this.Controls.Add(this.nudCodigo);
             this.Controls.Add(this.lblIndicaciones);
             this.Controls.Add(this.txtIndicaciones);
-            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnAgregar);
@@ -175,7 +138,6 @@
             this.Text = "Gestion Principio Activo";
             this.Load += new System.EventHandler(this.ABM_PrincipioActivo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipioActivo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCodigo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,9 +152,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblIndicaciones;
         private System.Windows.Forms.TextBox txtIndicaciones;
-        private System.Windows.Forms.NumericUpDown nudCodigo;
     }
 }

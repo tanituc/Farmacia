@@ -123,6 +123,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{e0f829d7-f22c-4ad1-b79b-d0a2145f1e3c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Servicios\Servicios.csproj">
       <Project>{d6914abd-65e9-4e69-8e7e-b96a635535cb}</Project>
       <Name>Servicios</Name>

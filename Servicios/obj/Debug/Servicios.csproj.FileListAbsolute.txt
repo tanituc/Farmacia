@@ -3,3 +3,10 @@ D:\Apps\Farmacia\Servicios\bin\Debug\Servicios.pdb
 D:\Apps\Farmacia\Servicios\obj\Debug\Servicios.csprojResolveAssemblyReference.cache
 D:\Apps\Farmacia\Servicios\obj\Debug\Servicios.dll
 D:\Apps\Farmacia\Servicios\obj\Debug\Servicios.pdb
+D:\Apps\Farmacia\Servicios\bin\Debug\Servicios.dll.config
+D:\Apps\Farmacia\Servicios\bin\Debug\DAL.dll
+D:\Apps\Farmacia\Servicios\bin\Debug\EntityFramework.dll
+D:\Apps\Farmacia\Servicios\bin\Debug\EntityFramework.SqlServer.dll
+D:\Apps\Farmacia\Servicios\bin\Debug\DAL.pdb
+D:\Apps\Farmacia\Servicios\bin\Debug\EntityFramework.xml
+D:\Apps\Farmacia\Servicios\bin\Debug\EntityFramework.SqlServer.xml

@@ -81,6 +81,7 @@
             this.cbPrincipioActivo.Name = "cbPrincipioActivo";
             this.cbPrincipioActivo.Size = new System.Drawing.Size(121, 21);
             this.cbPrincipioActivo.TabIndex = 3;
+            this.cbPrincipioActivo.SelectedIndexChanged += new System.EventHandler(this.cbPrincipioActivo_SelectedIndexChanged);
             // 
             // tbNombreComercial
             // 
@@ -188,6 +189,7 @@
             this.Name = "NuevoMedicamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo Medicamento";
+            this.Load += new System.EventHandler(this.NuevoMedicamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

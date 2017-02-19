@@ -1,6 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-  <Alias Key="Model" Value="ModeloFarmacia" />
-  <Alias Key="Target" Value="ModeloFarmacia.Store" />
-  <EntityContainerMapping CdmEntityContainer="ModeloFarmaciaContainer" StorageEntityContainer="ModeloFarmaciaTargetContainer" />
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModeloFarmaciaStoreContainer" CdmEntityContainer="ModeloFarmaciaContainer">
+    <EntitySetMapping Name="Personas">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Persona)">
+        <MappingFragment StoreEntitySet="Personas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Empresa)">
+        <MappingFragment StoreEntitySet="Personas_Empresa">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patologias">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Patologia)">
+        <MappingFragment StoreEntitySet="Patologias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medicamentos">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Medicamento)">
+        <MappingFragment StoreEntitySet="Medicamentos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Indicacion" ColumnName="Indicacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Marcas">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Marca)">
+        <MappingFragment StoreEntitySet="Marcas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="LaboratorioId" ColumnName="LaboratorioId" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="MedicamentoId" ColumnName="MedicamentoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObraSociales">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.ObraSocial)">
+        <MappingFragment StoreEntitySet="ObraSociales">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laboratorios">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Laboratorio)">
+        <MappingFragment StoreEntitySet="Laboratorios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarcaObraSociales">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.MarcaObraSocial)">
+        <MappingFragment StoreEntitySet="MarcaObraSociales">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Detalle" ColumnName="Detalle" />
+          <ScalarProperty Name="IdMarca" ColumnName="IdMarca" />
+          <ScalarProperty Name="IdObraSocial" ColumnName="IdObraSocial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonaFisicaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.PersonaFisica)">
+        <MappingFragment StoreEntitySet="PersonaFisicaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Empleado)">
+        <MappingFragment StoreEntitySet="PersonaFisicaSet_Empleado">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EmpleadoId" ColumnName="EmpleadoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(ModeloFarmacia.Cliente)">
+        <MappingFragment StoreEntitySet="PersonaFisicaSet_Cliente">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ClienteId" ColumnName="ClienteId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MarcaLaboratorio" TypeName="ModeloFarmacia.MarcaLaboratorio" StoreEntitySet="Marcas">
+      <EndProperty Name="Laboratorio">
+        <ScalarProperty Name="Id" ColumnName="Laboratorio_Id" />
+      </EndProperty>
+      <EndProperty Name="Marca">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MedicamentoMarca" TypeName="ModeloFarmacia.MedicamentoMarca" StoreEntitySet="Marcas">
+      <EndProperty Name="Medicamento">
+        <ScalarProperty Name="Id" ColumnName="Medicamento_Id" />
+      </EndProperty>
+      <EndProperty Name="Marca">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MarcaObraSocialObraSocial" TypeName="ModeloFarmacia.MarcaObraSocialObraSocial" StoreEntitySet="MarcaObraSociales">
+      <EndProperty Name="ObraSocial">
+        <ScalarProperty Name="Id" ColumnName="ObraSocial_Id" />
+      </EndProperty>
+      <EndProperty Name="MarcaObraSocial">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MarcaObraSocialMarca" TypeName="ModeloFarmacia.MarcaObraSocialMarca" StoreEntitySet="MarcaObraSociales">
+      <EndProperty Name="Marca">
+        <ScalarProperty Name="Id" ColumnName="Marca_Id" />
+      </EndProperty>
+      <EndProperty Name="MarcaObraSocial">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PatologiaMedicamento" TypeName="ModeloFarmacia.PatologiaMedicamento" StoreEntitySet="Patologias">
+      <EndProperty Name="Medicamento">
+        <ScalarProperty Name="Id" ColumnName="Medicamento_Id" />
+      </EndProperty>
+      <EndProperty Name="Patologia">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
 </Mapping>
